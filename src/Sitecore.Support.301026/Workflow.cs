@@ -134,11 +134,13 @@ namespace Sitecore.Support.Shell.Framework.Commands
           {
             if (Context.ClientPage.Modified)
             {
-              CheckModifiedParameters parameters = new CheckModifiedParameters
-              {
-                ResumePreviousPipeline = true
-              };
-              SheerResponse.CheckModified(parameters);
+              #region Temporary removed
+              //CheckModifiedParameters parameters = new CheckModifiedParameters
+              //{
+              //  ResumePreviousPipeline = true
+              //};
+              #endregion
+              SheerResponse.CheckModified(true);
               args.WaitForPostBack();
               return;
             }
