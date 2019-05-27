@@ -255,7 +255,7 @@ namespace Sitecore.Support.Web.UI.HtmlControls
         {
             base.OnLoad(e);
 
-            if (Sitecore.Context.ClientPage.IsEvent)
+            if (Sitecore.Context.ClientPage.IsEvent && !Sitecore.Context.ClientPage.IsResult)
             {
                 bool isChecked = m_loadedValue != null;
 
